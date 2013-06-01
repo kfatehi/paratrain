@@ -16,7 +16,7 @@ window.Paratrain = class Paratrain
     unless @capturing?
       @beginCapture()
       @listening = true
-      @gui.find('#status').text('Listening').show()
+      @gui.find('#status').text('Test Listening').show()
   
   captureSuccess: (mediaFiles) ->
     for media_file in mediaFiles
@@ -24,6 +24,8 @@ window.Paratrain = class Paratrain
 
   captureError: (error) ->
     navigator.notification.alert "Error code: #{error.code}", null, 'Capture Error'
+    if error.code == 3
+      @gui.find('#status').text('No sounds were recorded.')
 
   beginCapture: ->
     navigator.device.capture.captureAudio @captureSuccess, @captureError, limit: 2

@@ -6,7 +6,7 @@
 window.app =
   # Application Constructor
   initialize: -> 
-    @paratrain ?= new Paratrain()
+    window.paratrain = @paratrain ?= new Paratrain()
     @bindEvents()
 
   # Bind Event Listeners
@@ -21,14 +21,13 @@ window.app =
   # function, we must explicity call 'app.receivedEvent(...);'
   onDeviceReady: ->
     app.receivedEvent "deviceready"
-    @paratrain.resume()
+    @paratrain.listen()
 
   # Update DOM on a Received Event
   receivedEvent: (id) ->
     $("##{id} .listening").css "display", "none"
     $("##{id} .received").css "display", "block"
     console.log "Received Event: " + id
-    @paratrain.receivedEvent(id)
 
 $ ->
   FastClick.attach document.body

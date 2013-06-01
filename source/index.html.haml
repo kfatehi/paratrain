@@ -1,7 +1,9 @@
-%h1 Paratrain
-#deviceready.blink
-  %p.event.listening Initializing
-  %p.event.received Ready
-
 #paratrain
-  %button#startrecording Start Recording
+  %h1 Paratrain
+  #status
+    #deviceready.blink
+      %p.event.listening Initializing
+      %p.event.received Ready
+
+  #controls
+    %button#startrecording Start Recording

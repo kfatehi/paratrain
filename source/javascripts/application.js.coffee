@@ -1,10 +1,13 @@
 #= require vendor/cordova-2.7.0
 #= require vendor/fastclick
 #= require vendor/jquery-2.0.1
+#= require lib/paratrain
 
 window.app =
   # Application Constructor
-  initialize: -> @bindEvents()
+  initialize: -> 
+    @paratrain ?= new Paratrain()
+    @bindEvents()
 
   # Bind Event Listeners
   #
@@ -16,14 +19,16 @@ window.app =
   #
   # The scope of 'this' is the event. In order to call the 'receivedEvent'
   # function, we must explicity call 'app.receivedEvent(...);'
-  onDeviceReady: -> app.receivedEvent "deviceready"
+  onDeviceReady: ->
+    app.receivedEvent "deviceready"
+    @paratrain.resume()
 
   # Update DOM on a Received Event
   receivedEvent: (id) ->
     $("##{id} .listening").css "display", "none"
     $("##{id} .received").css "display", "block"
-
     console.log "Received Event: " + id
+    @paratrain.receivedEvent(id)
 
 $ ->
   FastClick.attach document.body

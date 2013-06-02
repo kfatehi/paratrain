@@ -12,6 +12,7 @@
 @interface PTParatrain : NSObject {
     AVAudioPlayer *audioPlayer;
     AVAudioRecorder *audioRecorder;
+    NSTimer *metering;
     int recordEncoding;
     enum
     {
@@ -25,6 +26,9 @@
 }
 
 - (void) listen;
+
+- (void) updateMeters;
+
 - (void) startRecording;
 - (void) stopRecording;
 - (void) playRecording;

@@ -44,6 +44,16 @@
     audioRecorder = [[AVAudioRecorder alloc] initWithURL:self.tempFilePath
                                                  settings:recordSettings
                                                     error:&error];
+    audioRecorder.meteringEnabled = YES;
+    
+    if (audioRecorder.meteringEnabled){
+        metering = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                                    target:self
+                                                  selector:@selector(updateMeters)
+                                                  userInfo:nil
+                                                   repeats:YES];
+    }
+    
     
     if ([audioRecorder prepareToRecord] == YES){
         [audioRecorder record];
@@ -54,6 +64,23 @@
     }
     NSLog(@"recording");
     
+}
+
+- (void) updateMeters {
+    if (audioRecorder && audioRecorder.isRecording) {
+        if (audioRecorder.meteringEnabled){
+            [audioRecorder updateMeters];
+            float average = [audioRecorder averagePowerForChannel:0];
+            float peak = [audioRecorder peakPowerForChannel:0];
+            NSLog(@"Average: %f \nPeak:%f", average, peak);
+        } else {
+            NSLog(@"Metering is disabled");
+            [metering invalidate];
+        }
+    } else {
+        NSLog(@"Not recording. Disable meter");
+        [metering invalidate];
+    }
 }
 
 -(void) stopRecording

@@ -8,7 +8,7 @@ PARROT ASSISTED TRAINING
  
 Buttons are optional and are mostly an experimental enhancement to the default algorithm.
 
-## Functionality Summary:
+## Basic Function
 
     The app will collect words it "hears".
     When it hears a new word, it will verify that it's a word by checking siri.
@@ -20,4 +20,8 @@ Buttons are optional and are mostly an experimental enhancement to the default a
         else
           repeat word
 
-If a second screen is available (Apple TV), when a word is "said" or "heard", a google search will yield a visual representation of that word to build cognitive association.
+## Second Screen
+
+    If a second screen is available (Apple TV), when a word is "said" or "heard", a google search will yield a visual representation of that word to build cognitive association.
+
+    When idling, show image db on 2nd screen, inviting the word to be said.

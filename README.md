@@ -19,3 +19,5 @@ Buttons are optional and are mostly an experimental enhancement to the default a
           insert new word
         else
           repeat word
+
+If a second screen is available (Apple TV), when a word is "said" or "heard", a google search will yield a visual representation of that word to build cognitive association.

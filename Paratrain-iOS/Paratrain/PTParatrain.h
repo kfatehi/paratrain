@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface PTParatrain : AVCaptureOutput
+@interface PTParatrain : AVAudioRecorder
 - (void) listen;
-- (AVMediaType) connectionMediaTypes;
 @end

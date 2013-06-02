@@ -25,6 +25,7 @@
 		7A496340175ADEC300FD5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A49633E175ADEC300FD5950 /* InfoPlist.strings */; };
 		7A496343175ADEC300FD5950 /* ParatrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A496342175ADEC300FD5950 /* ParatrainTests.m */; };
 		7A49634E175AE1C000FD5950 /* PTParatrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49634D175AE1C000FD5950 /* PTParatrain.m */; };
+		7A496351175AE63E00FD5950 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A49634F175AE62C00FD5950 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7A496342175ADEC300FD5950 /* ParatrainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParatrainTests.m; sourceTree = "<group>"; };
 		7A49634C175AE1BF00FD5950 /* PTParatrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTParatrain.h; sourceTree = "<group>"; };
 		7A49634D175AE1C000FD5950 /* PTParatrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTParatrain.m; sourceTree = "<group>"; };
+		7A49634F175AE62C00FD5950 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A49630F175ADEC300FD5950 /* UIKit.framework in Frameworks */,
+				7A496351175AE63E00FD5950 /* AVFoundation.framework in Frameworks */,
 				7A496311175ADEC300FD5950 /* Foundation.framework in Frameworks */,
 				7A496313175ADEC300FD5950 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -111,6 +114,7 @@
 		7A49630D175ADEC300FD5950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A49634F175AE62C00FD5950 /* AVFoundation.framework */,
 				7A49630E175ADEC300FD5950 /* UIKit.framework */,
 				7A496310175ADEC300FD5950 /* Foundation.framework */,
 				7A496312175ADEC300FD5950 /* CoreGraphics.framework */,

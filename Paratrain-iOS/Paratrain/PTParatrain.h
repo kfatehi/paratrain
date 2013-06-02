@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface PTParatrain : NSObject
+@interface PTParatrain : AVCaptureOutput
 - (void) listen;
+- (AVMediaType) connectionMediaTypes;
 @end

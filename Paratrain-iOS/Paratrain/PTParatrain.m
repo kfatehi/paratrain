@@ -14,11 +14,18 @@
 - (void) listen
 {
     NSLog(@"Paratrain#listen");
-    recordEncoding = ENC_IMA4;
+    [self startRecording];
 }
 
 - (void) startRecording
 {
+    if (audioRecorder && audioRecorder.recording)
+    {
+        NSLog(@"Already recording");
+        return;
+    }
+    
+    recordEncoding = ENC_IMA4;
     NSLog(@"startRecording");
     audioRecorder = nil;
     
@@ -33,10 +40,10 @@
        AVNumberOfChannelsKey:@1
     };
     
-    NSURL *url = self.tempFilePath;
-    
     NSError *error = nil;
-    audioRecorder = [[ AVAudioRecorder alloc] initWithURL:url settings:recordSettings error:&error];
+    audioRecorder = [[AVAudioRecorder alloc] initWithURL:self.tempFilePath
+                                                 settings:recordSettings
+                                                    error:&error];
     
     if ([audioRecorder prepareToRecord] == YES){
         [audioRecorder record];
@@ -46,6 +53,36 @@
         
     }
     NSLog(@"recording");
+    
+}
+
+-(void) stopRecording
+{
+    NSLog(@"stopRecording");
+    [audioRecorder stop];
+    NSLog(@"stopped");
+}
+
+-(void) playRecording
+{
+    NSLog(@"playRecording");
+    // Init audio with playback capability
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:self.tempFilePath
+                                                         error:&error];
+    audioPlayer.numberOfLoops = 0;
+    [audioPlayer play];
+    NSLog(@"playing");
+}
+
+-(void) stopPlaying
+{
+    NSLog(@"stopPlaying");
+    [audioPlayer stop];
+    NSLog(@"stopped");
 }
 
 - (NSURL*) tempFilePath

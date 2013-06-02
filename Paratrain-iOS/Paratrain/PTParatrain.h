@@ -24,11 +24,10 @@
     } encodingTypes;
 }
 
+- (void) listen;
+- (void) startRecording;
+- (void) stopRecording;
+- (void) playRecording;
+- (void) stopPlaying;
 - (NSURL*) tempFilePath;
-
--(void) startRecording;
--(void) stopRecording;
--(void) playRecording;
--(void) stopPlaying;
-
 @end

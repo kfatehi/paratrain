@@ -12,4 +12,8 @@
 @interface PTViewController : UIViewController
 @property PTParatrain *paratrain;
 - (void) loadParatrain;
+- (IBAction) startRecording;
+- (IBAction) stopRecording;
+- (IBAction) playRecording;
+- (IBAction) stopPlaying;
 @end

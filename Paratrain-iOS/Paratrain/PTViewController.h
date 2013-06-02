@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTParatrain.h"
 
 @interface PTViewController : UIViewController
-
+@property PTParatrain *paratrain;
+- (void) loadParatrain;
 @end

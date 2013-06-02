@@ -24,6 +24,7 @@
 		7A496338175ADEC300FD5950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A496310175ADEC300FD5950 /* Foundation.framework */; };
 		7A496340175ADEC300FD5950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A49633E175ADEC300FD5950 /* InfoPlist.strings */; };
 		7A496343175ADEC300FD5950 /* ParatrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A496342175ADEC300FD5950 /* ParatrainTests.m */; };
+		7A49634E175AE1C000FD5950 /* PTParatrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49634D175AE1C000FD5950 /* PTParatrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +54,15 @@
 		7A496327175ADEC300FD5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		7A49632A175ADEC300FD5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7A49632C175ADEC300FD5950 /* PTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTViewController.h; sourceTree = "<group>"; };
-		7A49632D175ADEC300FD5950 /* PTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTViewController.m; sourceTree = "<group>"; };
+		7A49632D175ADEC300FD5950 /* PTViewController.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewController.m; sourceTree = "<group>"; tabWidth = 4; };
 		7A496334175ADEC300FD5950 /* ParatrainTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParatrainTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A496335175ADEC300FD5950 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7A49633D175ADEC300FD5950 /* ParatrainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParatrainTests-Info.plist"; sourceTree = "<group>"; };
 		7A49633F175ADEC300FD5950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A496341175ADEC300FD5950 /* ParatrainTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParatrainTests.h; sourceTree = "<group>"; };
 		7A496342175ADEC300FD5950 /* ParatrainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParatrainTests.m; sourceTree = "<group>"; };
+		7A49634C175AE1BF00FD5950 /* PTParatrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTParatrain.h; sourceTree = "<group>"; };
+		7A49634D175AE1C000FD5950 /* PTParatrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTParatrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				7A496329175ADEC300FD5950 /* MainStoryboard_iPad.storyboard */,
 				7A49632C175ADEC300FD5950 /* PTViewController.h */,
 				7A49632D175ADEC300FD5950 /* PTViewController.m */,
+				7A49634C175AE1BF00FD5950 /* PTParatrain.h */,
+				7A49634D175AE1C000FD5950 /* PTParatrain.m */,
 				7A496315175ADEC300FD5950 /* Supporting Files */,
 			);
 			path = Paratrain;
@@ -278,6 +283,7 @@
 				7A49631B175ADEC300FD5950 /* main.m in Sources */,
 				7A49631F175ADEC300FD5950 /* PTAppDelegate.m in Sources */,
 				7A49632E175ADEC300FD5950 /* PTViewController.m in Sources */,
+				7A49634E175AE1C000FD5950 /* PTParatrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +474,7 @@
 				7A496348175ADEC300FD5950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A496349175ADEC300FD5950 /* Build configuration list for PBXNativeTarget "ParatrainTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +483,7 @@
 				7A49634B175ADEC300FD5950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

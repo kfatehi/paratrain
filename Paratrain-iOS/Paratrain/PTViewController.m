@@ -7,6 +7,7 @@
 //
 
 #import "PTViewController.h"
+#import "PTParatrain.h"
 
 @interface PTViewController ()
 
@@ -17,13 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self loadParatrain];
+    [self.paratrain listen];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadParatrain
+{
+    if (self.paratrain) return;
+    self.paratrain = [[PTParatrain alloc] init];
 }
 
 @end
